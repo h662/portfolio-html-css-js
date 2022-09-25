@@ -6,12 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>h662 Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-blue-100 md:mx-24 shadow-sm">
-    <header class="bg-red-100 flex items-center justify-between py-4">
+  <body class="bg-blue-100 md:mx-24">
+    <header class="bg-red-100 flex items-center justify-between shadow-sm">
       <h1 class="text-3xl InkLipquid">h662 Portfolio</h1>
-      <div>날씨</div>
+      <div class="bg-green-100 flex flex-col justify-center">
+        <img
+          class="weatherIcon"
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="weatherIcon"
+        />
+        <span class="cityTemp">Seoul, 22℃</span>
+      </div>
     </header>
+    <main>
+      <div
+        class="introduceMessage bg-yellow-100 hover:bg-yellow-200 cursor-pointer text-2xl font-bold px-4 py-12 md:mx-24 md:my-36 md:px-12 md:py-36 md:text-6xl"
+        onclick="onClickIntroduce()"
+      >
+        안녕하세요, 프론트엔드 개발자 h662입니다.
+      </div>
+      <div class="bg-orange-100">
+        <h2 class="text-center text-2xl font-bold md:text-6xl">About Me</h2>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center mt-8 text-xl"
+        >
+          <image class="md:w-96" src="./owl.png" alt="owl" />
+          <ul class="md:ml-16 md:text-4xl">
+            <li class="mt-4 text-center">Code Name: h662</li>
+            <li class="bg-blue-100 mt-4 w-full">✅ HTML / CSS / JAVASCRIPT</li>
+            <li class="bg-blue-100 mt-2 w-full">✅ React</li>
+            <li class="bg-blue-100 mt-2 w-full">✅ Solidity</li>
+            <li class="my-4">즐기면서 배우고, 배우면서 즐겨라✏️</li>
+          </ul>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
