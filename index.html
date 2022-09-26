@@ -9,10 +9,12 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-blue-100 md:mx-24">
-    <header class="bg-red-100 flex items-center justify-between shadow-sm">
+  <body>
+    <header
+      class="sticky top-0 bg-white flex items-center justify-between shadow-sm mx-4 md:mx-24"
+    >
       <h1 class="text-3xl InkLipquid">h662 Portfolio</h1>
-      <div class="bg-green-100 flex flex-col justify-center">
+      <div class="flex flex-col justify-center">
         <img
           class="weatherIcon"
           src="http://openweathermap.org/img/wn/10d@2x.png"
@@ -21,14 +23,14 @@
         <span class="cityTemp">Seoul, 22℃</span>
       </div>
     </header>
-    <main>
+    <main class="md:mx-24">
       <div
         class="introduceMessage bg-yellow-100 hover:bg-yellow-200 cursor-pointer text-2xl font-bold px-4 py-12 md:mx-24 md:my-36 md:px-12 md:py-36 md:text-6xl"
         onclick="onClickIntroduce()"
       >
         안녕하세요, 프론트엔드 개발자 h662입니다.
       </div>
-      <div class="bg-orange-100">
+      <div>
         <h2 class="text-center text-2xl font-bold md:text-6xl">About Me</h2>
         <div
           class="flex flex-col md:flex-row justify-center items-center mt-8 text-xl"
@@ -36,13 +38,14 @@
           <image class="md:w-96" src="./owl.png" alt="owl" />
           <ul class="md:ml-16 md:text-4xl">
             <li class="mt-4 text-center">Code Name: h662</li>
-            <li class="bg-blue-100 mt-4 w-full">✅ HTML / CSS / JAVASCRIPT</li>
-            <li class="bg-blue-100 mt-2 w-full">✅ React</li>
-            <li class="bg-blue-100 mt-2 w-full">✅ Solidity</li>
+            <li class="mt-4 w-full">✅ HTML / CSS / JAVASCRIPT</li>
+            <li class="mt-2 w-full">✅ React</li>
+            <li class="mt-2 w-full">✅ Solidity</li>
             <li class="my-4">즐기면서 배우고, 배우면서 즐겨라✏️</li>
           </ul>
         </div>
       </div>
+
       <div
         class="flex md:flex-col w-screen max-w-screen-lg mx-auto overflow-scroll md:overflow-hidden snap-x snap-mandatory text-center"
       >
@@ -53,7 +56,10 @@
           <div class="mt-4 text-xl md:text-4xl font-bold">
             우리문화 살리기 프로젝트
           </div>
-          <button class="bg-green-300 px-4 py-2 mt-2 rounded-xl md:text-2xl">
+          <button
+            class="bg-green-300 px-4 py-2 mt-2 rounded-xl md:text-2xl"
+            onclick="onClickOpenModal('project1')"
+          >
             더 보기
           </button>
         </div>
@@ -62,7 +68,10 @@
         >
           <img src="project2.png" alt="프로젝트2" />
           <div class="mt-4 text-xl md:text-4xl font-bold">리액트 마스터</div>
-          <button class="bg-red-300 px-4 py-2 mt-2 rounded-xl md:text-2xl">
+          <button
+            class="bg-red-300 px-4 py-2 mt-2 rounded-xl md:text-2xl"
+            onclick="onClickOpenModal('project2')"
+          >
             더 보기
           </button>
         </div>
@@ -73,11 +82,43 @@
           <div class="mt-4 text-xl md:text-4xl font-bold">
             스마트 컨트랙트 정복
           </div>
-          <button class="bg-purple-300 px-4 py-2 mt-2 rounded-xl md:text-2xl––">
+          <button
+            class="bg-purple-300 px-4 py-2 mt-2 rounded-xl md:text-2xl"
+            onclick="onClickOpenModal('project3')"
+          >
             더 보기
           </button>
         </div>
       </div>
+      <div
+        class="bg-gradient-to-t md:bg-gradient-to-r from-violet-500 to-fuchsia-500 py-8 text-gray-100 md:text-4xl text-center mt-8"
+      >
+        <h3 class="font-bold">Contact Me</h3>
+        <ul class="md:mt-8">
+          <li>🏢 서울시 강서구 공항동</li>
+          <li class="md:mt-4">📱 01공-588둘-둘1삼6</li>
+          <li class="md:mt-4">📧 h662@olbm.app</li>
+        </ul>
+      </div>
     </main>
+    <footer class="mx-24 text-center my-2">
+      desinged by h662. 2022. All Rights Reserved.
+    </footer>
+    <div
+      class="modalDetail bg-black bg-opacity-40 w-screen min-h-screen fixed top-0 hidden justify-center items-center"
+    >
+      <div
+        class="bg-white w-3/4 md:w-1/2 text-center py-8 text-2xl md:text-4xl"
+      >
+        <h3 class="modalTitle font-bold"></h3>
+        <ul class="modalContents"></ul>
+        <button
+          class="bg-red-300 px-8 py-4 rounded-full mt-8"
+          onClick="onClickCloseModal()"
+        >
+          닫기
+        </button>
+      </div>
+    </div>
   </body>
 </html>
